@@ -76,6 +76,8 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
     task_description = "Run UI tests for {0} {1} build for Android.".format(engine, device)
     build_dir = "assemble{0}{1}Debug".format(engine, device.capitalize())
     build_dir_test = "assemble{0}{1}DebugAndroidTest".format(engine, device.capitalize())
+    print('BUILD_DIR: {0}'.format(build_dir))
+    print('BUILD_DIR_TEST: {0}'.format(build_dir_test))
     device = device.lower()
 
     if engine is "Klar":
@@ -89,7 +91,7 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
         name=task_name,
         description=task_description,
         command=('echo "--" > .adjust_token'
-                 ' && ./gradlew --no-daemon clean ' + build_dir + ' ' + build_dir_test
+                 ' && ./gradlew --no-daemon clean ' + build_dir + ' ' + build_dir_test + ' '
                  ' && ./tools/taskcluster/google-firebase-testlab-login.sh'
                  ' && tools/taskcluster/execute-firebase-tests.sh ' + device + ' ' + engine),
         dependencies=dependencies,
