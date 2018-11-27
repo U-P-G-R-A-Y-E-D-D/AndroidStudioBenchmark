@@ -72,20 +72,22 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
     :param str device: ARM, X86
     :return: uiWebviewARMTestTaskId, uiWebviewARMTestTask
     '''
+    if engine is "Klar":
+        engine = "geckoview"
+        assemble_engine = engine 
+    elif engine is "Webview":
+        engine = "webview"
+        assemble_engine = "Focus"
+    else:
+        raise Exception("ERROR: wrong engine type --> Aborting!")
+
     task_name = "(Focus for Android) UI tests - {0} {1}".format(engine, device)
     task_description = "Run UI tests for {0} {1} build for Android.".format(engine, device)
-    build_dir = "assemble{0}{1}Debug".format(engine, device.capitalize())
-    build_dir_test = "assemble{0}{1}DebugAndroidTest".format(engine, device.capitalize())
+    build_dir = "assemble{0}{1}Debug".format(assemble_engine, device.capitalize())
+    build_dir_test = "assemble{0}{1}DebugAndroidTest".format(assemble_engine, device.capitalize())
     print('BUILD_DIR: {0}'.format(build_dir))
     print('BUILD_DIR_TEST: {0}'.format(build_dir_test))
     device = device.lower()
-
-    if engine is "Klar":
-        engine = "geckoview"
-    elif engine is "Webview":
-        engine = "webview"
-    else:
-        raise Exception("ERROR: wrong engine type --> Aborting!")
 
     return taskcluster.slugId(), generate_task(
         name=task_name,
@@ -96,6 +98,7 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
                  ' && tools/taskcluster/execute-firebase-tests.sh ' + device + ' ' + engine),
         dependencies=dependencies,
         scopes=['secrets:get:project/focus/firebase'],
+        routes=['notify.irc-channel.#android-ci.on-any'],
         artifacts={
             "public": {
                 "type": "directory",
