@@ -89,7 +89,6 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
     print('BUILD_DIR_TEST: {0}'.format(build_dir_test))
     device = device.lower()
 
-    # https://tools.taskcluster.net/groups/EyXe5e60QEu1A-IlcPDqMA/tasks/EyXe5e60QEu1A-IlcPDqMA/runs/0/logs/public%2Flogs%2Flive_backing.log
     return taskcluster.slugId(), generate_task(
         name=task_name,
         description=task_description,
@@ -184,8 +183,8 @@ if __name__ == "__main__":
     uiWebviewARMTestTaskId, uiWebviewARMTestTask = generate_ui_test_task( [unitTestTaskId, codeQualityTaskId], "Webview", "ARM")
     schedule_task(queue, uiWebviewARMTestTaskId, uiWebviewARMTestTask)
 
-    uiWebviewX86TestTaskId, uiWebviewX86TestTask = generate_ui_test_task([unitTestTaskId, codeQualityTaskId], "Webview", "X86")
-    schedule_task(queue, uiWebviewX86TestTaskId, uiWebviewX86TestTask)
+    # uiWebviewX86TestTaskId, uiWebviewX86TestTask = generate_ui_test_task([unitTestTaskId, codeQualityTaskId], "Webview", "X86")
+    # schedule_task(queue, uiWebviewX86TestTaskId, uiWebviewX86TestTask)
 
     uploadNDTaskId, uploadNDTask = upload_apk_nimbledroid_task([unitTestTaskId, codeQualityTaskId])
     schedule_task(queue, uploadNDTaskId, uploadNDTask)
