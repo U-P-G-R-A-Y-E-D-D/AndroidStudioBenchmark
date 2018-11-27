@@ -89,6 +89,7 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
     print('BUILD_DIR_TEST: {0}'.format(build_dir_test))
     device = device.lower()
 
+    # https://tools.taskcluster.net/groups/EyXe5e60QEu1A-IlcPDqMA/tasks/EyXe5e60QEu1A-IlcPDqMA/runs/0/logs/public%2Flogs%2Flive_backing.log
     return taskcluster.slugId(), generate_task(
         name=task_name,
         description=task_description,
@@ -98,7 +99,6 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
                  ' && tools/taskcluster/execute-firebase-tests.sh ' + device + ' ' + engine),
         dependencies=dependencies,
         scopes=['secrets:get:project/focus/firebase'],
-        routes=['notify.irc-channel.#android-ci.on-any'],
         artifacts={
             "public": {
                 "type": "directory",
