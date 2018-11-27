@@ -79,7 +79,7 @@ def generate_ui_test_task(dependencies, engine="Klar", device="ARM"):
         engine = "webview"
         assemble_engine = "Focus"
     else:
-        raise Exception("ERROR: wrong engine type --> Aborting!")
+        raise Exception("ERROR: unknown engine type --> Aborting!")
 
     task_name = "(Focus for Android) UI tests - {0} {1}".format(engine, device)
     task_description = "Run UI tests for {0} {1} build for Android.".format(engine, device)
