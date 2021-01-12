@@ -21,7 +21,6 @@ professional stuff.
 
 
 [![Build Status](https://travis-ci.org/mozilla-mobile/focus-android.svg?branch=master)](https://travis-ci.org/mozilla-mobile/focus-android)
-[![Task Status](https://github.taskcluster.net/v1/repository/mozilla-mobile/focus-android/master/badge.svg)](https://github.taskcluster.net/v1/repository/mozilla-mobile/focus-android/master/latest)
 [![codecov](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master/graph/badge.svg)](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master)
 
 _Browse like no one’s watching. The new Firefox Focus automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
@@ -38,7 +37,9 @@ Firefox Focus provides automatic ad blocking and tracking protection on an easy-
 
 
 
-# 1. Install Android Studio: https://developer.android.com/studio 
+# 1. Install Android Studio: 
+https://developer.android.com/studio 
+
 I was running test on `Android Studio 4.1.1`.
 
 I was using default settings while installation almost for all my tests.
@@ -58,13 +59,17 @@ Select: `Android 9.0 (Pie) API Level 28` and download it.
 
 Close `Android Studio` after this.
 
-# 3. Install JDK 8: https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+# 3. Install JDK 8: 
+https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+
 I have installed: `Java SE Development Kit 8u271`
 
 # 4. Set "JAVA_HOME" path in your Environment variables (System variables):
 For me it was: `JAVA_HOME: C:\Program Files\Java\jdk1.8.0_271`
 
-# 5. Download AndroidStudioBenchmark repository: https://github.com/yozhik/AndroidStudioBenchmark
+# 5. Download AndroidStudioBenchmark repository: 
+https://github.com/yozhik/AndroidStudioBenchmark
+
 This is a fork of opensource `Firefox browser for Android` (https://github.com/mozilla-mobile/focus-android). 
 
 This is quite a big project (after all gradle modules downloaded it weights 6+Gb).
@@ -108,8 +113,8 @@ After each build completes make a screenshot and save time result.
 While system assembling watch for you `Task Manager` how `CPU` is processing, how much `RAM` is used, 
 it would be cool if you can watch CPU temperature with some tool like `AIDA`: https://www.aida64.com/downloads
 
-# 9. If you want to share result of your test with the community, 
-please send it to my email: serhiyradkivskiy@gmail.com and I will add it here:
+# 9. Share results
+If you want to share result of your test with the community, please send it to my email: serhiyradkivskiy@gmail.com and I will add it here:
 
 In such format:
 
@@ -149,11 +154,3 @@ Hashtag: `#AndroidStudioPerformanceTest`
 So everyone could find it and watch and your audiance could repeat steps after you and compare their machine results.
 
 The results show relative performance of Android Studio, compared to other machines running under similar conditions.
-
-
-## License
-
-
-    This Source Code Form is subject to the terms of the Mozilla Public
-    License, v. 2.0. If a copy of the MPL was not distributed with this
-    file, You can obtain one at http://mozilla.org/MPL/2.0/
