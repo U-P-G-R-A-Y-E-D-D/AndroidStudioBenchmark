@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/mozilla-mobile/focus-android.svg?branch=master)](https://travis-ci.org/mozilla-mobile/focus-android)
+[![codecov](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master/graph/badge.svg)](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master)
+
 # AndroidStudioBenchmark (Firefox Focus for Android)
 
 `AndroidStudioBenchmark` contains a large codebase to measure the compilation time in `Android Studio`.
@@ -19,13 +22,10 @@ If you are interested - just continue reading and if you'll find this test usefu
 and subscribe for my channel - it would be cool to have like minded audiance to share some more test on and get feedback on any 
 professional stuff.
 
-
-[![Build Status](https://travis-ci.org/mozilla-mobile/focus-android.svg?branch=master)](https://travis-ci.org/mozilla-mobile/focus-android)
-[![codecov](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master/graph/badge.svg)](https://codecov.io/gh/mozilla-mobile/focus-android/branch/master)
+# Results of benchmark testing:
+https://docs.google.com/spreadsheets/d/1AeeT_54b2VnovN4ikIsglh2Sc7U0bWxAarDKmGAJFtg/edit?usp=sharing
 
 _Browse like no one’s watching. The new Firefox Focus automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
-
-Firefox Focus provides automatic ad blocking and tracking protection on an easy-to-use private browser.
 
 <a href="https://play.google.com/store/apps/details?id=org.mozilla.focus" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="90"/></a>
 <a href="https://f-droid.org/en/packages/org.mozilla.klar/" target="_blank">
@@ -35,7 +35,7 @@ Firefox Focus provides automatic ad blocking and tracking protection on an easy-
 * [Google Play: Firefox Klar (Germany, Austria & Switzerland)](https://play.google.com/store/apps/details?id=org.mozilla.klar)
 * [Download APKs](https://github.com/mozilla-mobile/focus-android/releases)
 
-
+# Testing steps: 
 
 # 1. Install Android Studio: 
 https://developer.android.com/studio 
