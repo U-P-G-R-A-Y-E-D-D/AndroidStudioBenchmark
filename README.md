@@ -22,7 +22,7 @@ and subscribe for my channel - it would be cool to have like minded audiance to 
 professional stuff.
 
 # Results of Android Studio Performance testing:
-https://docs.google.com/spreadsheets/d/1AeeT_54b2VnovN4ikIsglh2Sc7U0bWxAarDKmGAJFtg/edit?usp=sharing
+Excel table: https://docs.google.com/spreadsheets/d/1AeeT_54b2VnovN4ikIsglh2Sc7U0bWxAarDKmGAJFtg/edit?usp=sharing
 
 Videos with test results are in this youtube playlist:
 
