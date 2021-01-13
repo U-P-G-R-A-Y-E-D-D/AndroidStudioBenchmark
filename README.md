@@ -12,9 +12,8 @@ You are probably familiar with the following question:
 `AndroidStudioBenchmark` is initially created for my personal youtube channel 
 https://www.youtube.com/c/serhiyradkivskyi/about
 to compare the performance of top laptops to choose the best system for `Android development`, because I hate to wait lot 
-of time waiting project to be built. And if we are buying laptop for 1000+ USD we want to be sure that it will perform 
-2x, 3x times faster than our current machine at least. But online shops in there most - don't give ability to make real world 
-testing on your project to compare results. And most of reviewers describe laptops from designers/youtubers point of view, 
+of time waiting project to be built. And if we are buying laptop for 1000+ USD we want to be sure that it will perform 100% faster than our current machine. But online shops in there most - don't give ability to make real world 
+testing on your project to compare results. And most of tech reviewers describe laptops from designers/youtubers point of view, 
 not that much information from real software developers.
 
 I believe the results will help developers to make the right cost/performance trade-off decision when choosing their next Mac/PC.
@@ -22,8 +21,12 @@ If you are interested - just continue reading and if you'll find this test usefu
 and subscribe for my channel - it would be cool to have like minded audiance to share some more test on and get feedback on any 
 professional stuff.
 
-# Results of benchmark testing:
+# Results of Android Studio Performance testing:
 https://docs.google.com/spreadsheets/d/1AeeT_54b2VnovN4ikIsglh2Sc7U0bWxAarDKmGAJFtg/edit?usp=sharing
+
+Videos with test results are in this youtube playlist:
+
+https://www.youtube.com/playlist?list=PLzZmmGI65hndugkUKKwZF-r9GG0hFObZW
 
 _Browse like no one’s watching. The new Firefox Focus automatically blocks a wide range of online trackers — from the moment you launch it to the second you leave it. Easily erase your history, passwords and cookies, so you won’t get followed by things like unwanted ads._ 
 
@@ -44,7 +47,7 @@ I was running test on `Android Studio 4.1.1`.
 
 I was using default settings while installation almost for all my tests.
 
-`Intel HAXM` also must be installed if you run on Intel chip.
+`Intel HAXM` also must be installed if you run on Intel chip (it is installed by default with Android Studio).
 
 I have set 4Gb RAM for my android virtual machine.
 
